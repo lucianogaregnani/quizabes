@@ -1,0 +1,45 @@
+$primary-font: "Mochiy Pop One";
+$secondary-font: "Mitr";
+
+$text-primary-color: #ffffff;
+$text-secondary-color: #ffa43a;
+
+$primary-color: #ffa43a;
+$primary-color-hover:#f08c28;
+
+$bg-primary-color: #4b4b82;
+$bg-secondary-color: #57569B;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $primary-font;
+  background-color: $bg-primary-color;
+
+  color: $text-primary-color;
+}
+
+a {
+  text-decoration: none;
+  color: $text-primary-color;
+}
+
+@mixin center($direction: row, $gap: 0px) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
+
+button {
+  background-color: $primary-color;
+  color: $text-primary-color;
+  border: 0;
+  cursor: pointer;
+  font-family: $primary-font;
+}

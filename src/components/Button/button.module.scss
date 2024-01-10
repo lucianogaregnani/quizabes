@@ -1,0 +1,10 @@
+@use '../../global.scss';
+
+.btnPrimary {
+    font-size: 1.1rem;
+    border-radius: 10rem 10rem;
+    padding: 15px 20px;
+    &:hover {
+        background-color: global.$primary-color-hover;
+    }
+}
