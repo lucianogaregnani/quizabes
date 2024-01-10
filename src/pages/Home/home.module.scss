@@ -30,6 +30,17 @@
             color: global.$text-secondary-color
         }
     }
+
+    @media (max-width: global.$layout-breakpoint-small) {
+        section {
+            h1 {
+                font-size: 3rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
 }
 
 .wave {

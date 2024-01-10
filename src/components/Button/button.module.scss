@@ -7,4 +7,8 @@
     &:hover {
         background-color: global.$primary-color-hover;
     }
+    @media (max-width: global.$layout-breakpoint-small) {
+        font-size: 0.8rem;
+        padding: 10px 20px;
+    }
 }

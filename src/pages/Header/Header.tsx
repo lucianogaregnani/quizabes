@@ -1,12 +1,12 @@
 import { ButtonIcon } from '../../components';
 import { ButtonBgColors } from '../../models';
-import './header.scss'
+import header from './header.module.scss'
 import { FaLinkedinIn } from "react-icons/fa6";
 import { TbBrandGithubFilled } from "react-icons/tb";
 
 function Header() {
     return (
-        <header className="header-section">
+        <header className={header.headerSection}>
             <p>
                 Quizabes
             </p>
