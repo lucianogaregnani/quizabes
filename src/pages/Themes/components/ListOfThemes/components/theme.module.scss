@@ -1,3 +1,31 @@
+$border-radius: 1rem;
+
 .themeArticle {
+    position: relative;
+    display: flex;
+    justify-content: center;
     text-align: center;
+    align-items: center;
+    border-radius: $border-radius;
+    transition: all 0.3s ease;
+
+    h4 {
+        position: absolute;
+        z-index: 20;
+        font-size: 1.3rem;
+    }
+
+    img {
+        width: 14rem;
+        border-radius: $border-radius;
+        filter: brightness(0.4);
+    }
+
+    &:hover {
+        transform: scale(1.04);
+        h4 {
+          transform: scale(1.02);
+        }
+    }
+
 }
