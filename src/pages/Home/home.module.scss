@@ -24,6 +24,7 @@
         font-family: global.$secondary-font;
         font-weight: 300;
         font-size: 1.8rem;
+        max-width: 60vw;
         span {
             font-family: global.$primary-font;
             font-weight: 500;
@@ -64,9 +65,4 @@
     path {
         fill: global.$bg-secondary-color;
     }
-}
-
-.homeButtons {
-    display: flex;
-    gap: 10px;
 }

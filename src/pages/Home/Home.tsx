@@ -7,15 +7,16 @@ function Home() {
     <main className={home.homeMain}>
       <section>
         <h1>
-          Juega y aprende al mismo <span>tiempo!</span>
+          Play and learn at the same <span>time!</span>
         </h1>
         <p>
-          Con <span>Quizabes</span> vas a poder tener muchos conocimientos en cultura
-          general, aprende de una forma divertida!
+          With <span>Quizabes</span>, you can gain a lot of knowledge in general
+          culture, learning in a fun way!
         </p>
         <div className={home.homeButtons}>
-            <Button text="ELEGIR TEMÁTICA" />
-            <Button text="CUALQUIER TEMÁTICA" />
+          <Button
+            text="Go play!"
+          />
         </div>
       </section>
       <Wave />
