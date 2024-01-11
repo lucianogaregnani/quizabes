@@ -1,0 +1,24 @@
+@use "../../global.scss";
+
+.wave {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+
+    svg {
+        position: relative;
+        display: block;
+        width: calc(148% + 1.3px);
+        height: 414px;
+        transform: rotateY(180deg);
+    }
+
+    path {
+        fill: global.$bg-secondary-color;
+    }
+}

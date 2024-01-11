@@ -1,5 +1,4 @@
 import { Button } from "../../components";
-import { Wave } from "./components";
 import home from "./home.module.scss";
 
 function Home() {
@@ -19,7 +18,6 @@ function Home() {
           />
         </div>
       </section>
-      <Wave />
     </main>
   );
 }

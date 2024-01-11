@@ -1,8 +1,8 @@
-import home from '../home.module.scss'
+import wave from './wave.module.scss'
 
 function Wave() {
   return (
-    <div className={home.wave}>
+    <div className={wave.wave}>
       <svg
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"

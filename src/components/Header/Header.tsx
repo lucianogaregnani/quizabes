@@ -1,4 +1,4 @@
-import { ButtonIcon } from '../../components';
+import { ButtonIcon } from '..';
 import { ButtonBgColors } from '../../models';
 import header from './header.module.scss'
 import { FaLinkedinIn } from "react-icons/fa6";
