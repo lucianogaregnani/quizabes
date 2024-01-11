@@ -1,0 +1,7 @@
+@use '../../global.scss';
+
+.themesSection {
+    @extend %section-body;
+    @include global.center($direction: column)
+}
+

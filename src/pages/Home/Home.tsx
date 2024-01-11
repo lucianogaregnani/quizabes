@@ -1,24 +1,21 @@
+import { Link } from "react-router-dom";
 import { Button } from "../../components";
 import home from "./home.module.scss";
 
 function Home() {
   return (
-    <main className={home.homeMain}>
-      <section>
-        <h1>
-          Play and learn at the same <span>time!</span>
-        </h1>
-        <p>
-          With <span>Quizabes</span>, you can gain a lot of knowledge in general
-          culture, learning in a fun way!
-        </p>
-        <div className={home.homeButtons}>
-          <Button
-            text="Go play!"
-          />
-        </div>
-      </section>
-    </main>
+    <section className={home.homeMain}>
+      <h1>
+        Play and learn at the same <span>time!</span>
+      </h1>
+      <p>
+        With <span>Quizabes</span>, you can gain a lot of knowledge in general
+        culture, learning in a fun way!
+      </p>
+      <Link className={home.homeButtons} to="/themes">
+        <Button text="Go play!" />
+      </Link>
+    </section>
   );
 }
 
