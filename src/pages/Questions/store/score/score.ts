@@ -12,3 +12,6 @@ export const scoreSlice = createSlice({
         }
     }
 })
+
+export default scoreSlice.reducer
+export const { changeScore } = scoreSlice.actions

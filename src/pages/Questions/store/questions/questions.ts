@@ -14,3 +14,4 @@ export const questionsSlice = createSlice({
 });
 
 export default questionsSlice.reducer;
+export const { addNewQuestions } = questionsSlice.actions

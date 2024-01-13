@@ -20,3 +20,4 @@ export const currentQuestionSlice = createSlice({
 });
 
 export default currentQuestionSlice.reducer;
+export const { changeCurrentQuestion } = currentQuestionSlice.actions
