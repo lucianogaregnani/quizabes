@@ -4,16 +4,13 @@ import { QuestionModel } from "./models";
 
 function Questions() {
     const questionAux: QuestionModel = {
-        type: "multiple",
-        difficulty: "hard",
-        question: "In &quot;League of Legends&quot;, there exists four different types of Dragon.",
-        correctAnswer: "Bobby Darin",
-        incorrectAnswers: [
-            "Louis Armstrong",
-            "Frank Sinatra",
-            "Dean Martin"
-        ]
-    }
+        type: "boolean",
+        difficulty: "medium",
+        question:
+          "The British organisation CAMRA stands for The Campaign for Real Ale.",
+        correctAnswer: "True",
+        incorrectAnswers: ["False"],
+      };
 
     return (
         <section className={questions.questionsSection}>
