@@ -1,6 +1,8 @@
+import { Difficulty, Type } from ".";
+
 export interface QuestionModel {
-    type: "multiple" | "boolean",
-    difficulty: "easy" | "medium" | "hard",
+    type: Type,
+    difficulty: Difficulty,
     question: string,
     correctAnswer: string,
     incorrectAnswers: string[]
