@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { QuestionModel } from "../../models";
 
 const initialState: QuestionModel[] = [];
@@ -7,8 +7,8 @@ export const questionsSlice = createSlice({
   name: "questions",
   initialState,
   reducers: {
-    addNewQuestions: (newQuestions: QuestionModel[]) => {
-      return newQuestions;
+    addNewQuestions: (_state, action:PayloadAction<QuestionModel[]>) => {
+      return action.payload;
     },
   },
 });

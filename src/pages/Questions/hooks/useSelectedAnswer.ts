@@ -13,7 +13,9 @@ function useSelectedAnswer() {
     };
   
     const handleResponse = (answer: string) => {
-      if(!selectedAnswer) setSelectedAnswer(answer);
+      if(!selectedAnswer) {
+        setSelectedAnswer(answer)
+      }
     };
     
     return ({ selectedAnswer, getBackgroundColor, handleResponse });

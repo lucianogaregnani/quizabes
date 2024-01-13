@@ -25,12 +25,6 @@
             gap: 0.4rem;
         }
 
-        >:last-child {
-            span {
-                color: rgb(219, 52, 52);
-            }
-        }
-
         >:nth-child(even) {
             position: absolute;
             left: 50%;
@@ -106,4 +100,16 @@
             height: 10rem;
         }
     }
+}
+
+.hardQuestion {
+    color: rgb(219, 52, 52)
+}
+
+.mediumQuestion {
+    color: rgb(240, 224, 4)
+}
+
+.easyQuestion {
+    color: rgb(102, 197, 73);
 }

@@ -1,14 +1,16 @@
 import { QuestionLayout, QuestionMultiple } from ".";
-import { QuestionModel } from "../models";
+import { useAppSelector } from "../hooks/store";
 import QuestionBoolean from "./QuestionBoolean";
 
-function Question({ question }: { question: QuestionModel }) {
+function Question() {
+  const currentQuestion = useAppSelector(state => state.currentQuestion)
+
   return (
     <QuestionLayout>
-      {question.type === "multiple" ? (
-        <QuestionMultiple />
+      {currentQuestion.type === "multiple" ? (
+        <QuestionMultiple question={currentQuestion} />
       ) : (
-        <QuestionBoolean />
+        <QuestionBoolean question={currentQuestion} />
       )}
     </QuestionLayout>
   );

@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { QuestionModel } from "../../models";
 
 const initialState: QuestionModel = {
@@ -13,8 +13,8 @@ export const currentQuestionSlice = createSlice({
   name: "currentQuestion",
   initialState,
   reducers: {
-    changeCurrentQuestion: (newQuestion: QuestionModel) => {
-      return newQuestion;
+    changeCurrentQuestion: (state, action:PayloadAction<QuestionModel>) => {
+      return { ...state, ...action.payload }
     },
   },
 });

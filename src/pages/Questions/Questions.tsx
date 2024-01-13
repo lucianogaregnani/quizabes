@@ -1,23 +1,19 @@
-import questions from "./questions.module.scss"
+import questions from "./questions.module.scss";
 import Question from "./components/Question";
-import { QuestionModel } from "./models";
+import useQuestions from "./hooks/useQuestions";
+import { useParams } from "react-router-dom";
 
 function Questions() {
-    const questionAux: QuestionModel = {
-        type: "boolean",
-        difficulty: "medium",
-        question:
-          "The British organisation CAMRA stands for The Campaign for Real Ale.",
-        correctAnswer: "True",
-        incorrectAnswers: ["False"],
-      };
+  const { themeId } = useParams();
+  const { loading, error } = useQuestions({ themeId });
 
-    return (
-        <section className={questions.questionsSection}>
-            <h1>General Knowledge</h1>
-            <Question question={questionAux}/>
-        </section>
-    );
+  return (
+    <section className={questions.questionsSection}>
+      {loading && <p>loading...</p>}
+      {error && <p>{error}</p>}
+      {!loading && !error && <Question />}
+    </section>
+  );
 }
 
 export default Questions;
