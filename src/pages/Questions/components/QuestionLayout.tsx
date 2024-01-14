@@ -19,6 +19,11 @@ function QuestionLayout({ children }: { children: React.ReactNode }) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentSecond])
 
+  useEffect(() => {
+    resetCurrentSecond()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentQuestion])
+
   const getDifficultyColor = () => {
     const difficulty = currentQuestion.difficulty 
     if(difficulty === 'hard') return question.hardQuestion
@@ -39,7 +44,7 @@ function QuestionLayout({ children }: { children: React.ReactNode }) {
             ></div>
           ))}
         </div>
-        <div>{currentIndex}/10</div>
+        <div>{currentIndex + 1}/10</div>
         <div>
           Difficulty: <span className={getDifficultyColor()}>{currentQuestion.difficulty.toUpperCase()}</span>
         </div>

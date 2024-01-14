@@ -17,8 +17,6 @@ function useQuestions({ themeId }: { themeId: string | undefined }) {
         return json.results;
       })
       .then((questions:QuestionFetch[]) => {
-        console.log(questions)
-        console.log(questionAdapter(questions))
         const adaptedQuestions = questionAdapter(questions)
         changeQuestions(adaptedQuestions);
         changeQuestion(adaptedQuestions[0]);

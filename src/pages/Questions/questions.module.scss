@@ -15,6 +15,10 @@
     background-color: #212122;
     width: 50rem;
     border-radius: 1rem;
+    h5 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
     header {
         display: flex;
         justify-content: space-between;
@@ -44,9 +48,6 @@
 
 .questionMultiple {
     text-align: center;
-    h5 {
-        font-size: 1.5rem;
-    }
     div {
         display: flex;
         flex-direction: column;
@@ -86,7 +87,6 @@
 
 .questionBoolean {
     text-align: center;
-    font-size: 1.5rem;
     padding: 1rem;
     div {
         margin-top: 0.5rem;

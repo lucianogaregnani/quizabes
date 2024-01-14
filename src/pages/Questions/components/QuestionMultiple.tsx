@@ -2,17 +2,20 @@ import { QuestionModel } from "../models";
 import questions from "../questions.module.scss";
 import { shuffleArray } from "../utils";
 import useSelectedAnswer from "../hooks/useSelectedAnswer";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function QuestionMultiple({ question }: { question: QuestionModel }) {
   const { getBackgroundColor, handleResponse } = useSelectedAnswer();
-  const [answers] = useState(
-    shuffleArray([question.correctAnswer, ...question.incorrectAnswers])
-  );
+  const [answers, setAnswers] = useState<string[]>([]);
+
+  useEffect(() => {
+    setAnswers(
+      shuffleArray([question.correctAnswer, ...question.incorrectAnswers])
+    );
+  }, [question]);
 
   return (
     <div className={questions.questionMultiple}>
-      <h5>{question.question}</h5>
       <div>
         {answers.map((answer) => (
           <button
