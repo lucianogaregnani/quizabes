@@ -3,13 +3,15 @@ import questionsReducer from "./questions/questions"
 import currentQuestionReducer from "./currentQuestion/currentQuestion"
 import scoreReducer from "./score/score"
 import selectedAnswerReducer from "./selectedAnswer/selectedAnswer";
+import gameFinishReducer from "./gameFinish/gameFinish";
 
 export const store = configureStore({
     reducer:{
         questions: questionsReducer,
         currentQuestion: currentQuestionReducer,
         score: scoreReducer,
-        selectedAnswer: selectedAnswerReducer
+        selectedAnswer: selectedAnswerReducer,
+        gameFinish: gameFinishReducer
     }
 })
 

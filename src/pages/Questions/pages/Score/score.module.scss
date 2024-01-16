@@ -1,0 +1,36 @@
+@use "../../../../global.scss";
+
+.scoreSection {
+    @extend %section-body;
+    @include global.center($direction: column, $gap:0.8rem);
+    h1 {
+        font-size: 3rem
+    }
+    p {
+        font-size: 2rem;
+    }
+    div {
+        display: flex;
+        gap: 1rem;
+        button {
+            font-size: 1rem;
+            width: 13rem;
+        }
+    }
+}
+
+.youCanGetBetter {
+    color: rgb(205, 95, 26);
+}
+
+.notBad {
+    color: rgb(216, 192, 32);
+}
+
+.good {
+    color: rgb(127, 193, 13);
+}
+
+.veryGood {
+    color: rgb(19, 193, 13);
+}

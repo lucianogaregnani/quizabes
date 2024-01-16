@@ -1,13 +1,14 @@
-import { useNavigate } from "react-router-dom";
 import { QuestionModel } from "../models";
 import questions from "../questions.module.scss";
 import { changeSelectedAnswer } from "../store/selectedAnswer/selectedAnswer";
 import { useAppDispatch, useAppSelector } from "./store";
 import useCurrentQuestion from "./useCurrentQuestion";
+import { changeGameFinish } from "../store/gameFinish/gameFinish";
+import { changeScore } from "../store/score/score";
 
 function useSelectedAnswer() {
-  const navigate = useNavigate()
   const dispatch = useAppDispatch();
+
   const selectedAnswer = useAppSelector((state) => state.selectedAnswer);
   const currentQuestion = useAppSelector((state) => state.currentQuestion);
   const questionsContext = useAppSelector((state) => state.questions);
@@ -27,12 +28,17 @@ function useSelectedAnswer() {
 
   const handleResponse = (answer: string) => {
     if (!selectedAnswer) {
+      dispatch(changeScore({
+        difficulty: currentQuestion.difficulty, 
+        type: currentQuestion.type, 
+        isCorrectAnswer: answer === currentQuestion.correctAnswer ? "correct" : "incorrect"
+      }))
       dispatch(changeSelectedAnswer(answer));
       setTimeout(() => {
-        if(indexQuestion <= 8) { 
-          goToNextQuestion() 
+        if (indexQuestion <= 8) {
+          goToNextQuestion();
         } else {
-          navigate('/score')
+          dispatch(changeGameFinish(true));
         }
       }, 1000);
     }
