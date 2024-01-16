@@ -1,9 +1,9 @@
 import { ButtonProps } from "../../models";
 import button from './button.module.scss'
 
-function Button({ text }:ButtonProps) {
+function Button({ text, onClick }:ButtonProps) {
     return (
-        <button className={`${button.btnPrimary}`}>
+        <button className={`${button.btnPrimary}`} onClick={onClick}>
             { text }
         </button>
     );

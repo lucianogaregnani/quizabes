@@ -19,6 +19,7 @@ function QuestionMultiple({ question }: { question: QuestionModel }) {
       <div>
         {answers.map((answer) => (
           <button
+            key={answer}
             className={`${questions.answer} ${getBackgroundColor(
               answer,
               question

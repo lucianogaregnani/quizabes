@@ -9,6 +9,7 @@ function Questions() {
   const { themeId } = useParams();
   const { loading, error } = useQuestions({ themeId });
   const itsGameFinish = useAppSelector((state) => state.gameFinish);
+  
   return (
     <section className={questions.questionsSection}>
       {itsGameFinish ? (

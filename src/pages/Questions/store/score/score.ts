@@ -9,9 +9,14 @@ export const scoreSlice = createSlice({
         changeScore: (state, action: PayloadAction<ChangeScoreParams>) => {
             const { difficulty, type, isCorrectAnswer } = action.payload
             return state + responseScore[difficulty][type][isCorrectAnswer]
+        },
+
+        resetScore: () => {
+            return 0
         }
+
     }
 })
 
 export default scoreSlice.reducer
-export const { changeScore } = scoreSlice.actions
+export const { changeScore, resetScore } = scoreSlice.actions
