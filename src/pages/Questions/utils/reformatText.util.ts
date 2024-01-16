@@ -1,9 +1,10 @@
-export const reformatText = (text:string) => {
-    if (text.includes('&quot;')) {
-        return text.replace(/&quot;/g, '"');
-    } else if (text.includes('#039;')) {
-        return text.replace(/#039;/g, "'");
-    } else {
-        return text;
-    }
-}
+export const reformatText = (text: string) => {
+  let newText = text;
+  if (text.includes("&quot;")) newText = newText.replace(/&quot;/g, '"');
+
+  if (text.includes("#039;")) newText = newText.replace(/#039;/g, "'");
+
+  if (text.includes("&'")) newText = newText.replace(/&'/g, '"');
+
+  return newText;
+};

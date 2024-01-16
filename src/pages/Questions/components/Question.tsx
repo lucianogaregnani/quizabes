@@ -4,8 +4,9 @@ import { reformatText } from "../utils/reformatText.util";
 import QuestionBoolean from "./QuestionBoolean";
 
 function Question() {
-  const currentQuestion = useAppSelector(state => state.currentQuestion)
-  const themeTitle = reformatText(currentQuestion.question)
+  const currentQuestion = useAppSelector((state) => state.currentQuestion);
+  const themeTitle = reformatText(currentQuestion.question);
+
   return (
     <QuestionLayout>
       <h5>{themeTitle}</h5>

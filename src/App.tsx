@@ -4,6 +4,7 @@ import { Layout } from "./components";
 import Questions from "./pages/Questions/Questions";
 import { store } from "./pages/Questions/store";
 import { Provider } from "react-redux";
+import Score from "./pages/Questions/pages/Score/Score";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             </Provider>
           }
         />
+        <Route path="/score" element={<Score />} />
       </Routes>
     </Layout>
   );
