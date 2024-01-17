@@ -7,7 +7,9 @@ $border-radius: 1rem;
     text-align: center;
     align-items: center;
     border-radius: $border-radius;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
+    width: 14rem;
+    height: 14rem;
 
     h4 {
         position: absolute;
@@ -16,7 +18,9 @@ $border-radius: 1rem;
     }
 
     img {
+        object-fit: cover;
         width: 14rem;
+        height: 14rem;
         border-radius: $border-radius;
         filter: brightness(0.4);
     }
