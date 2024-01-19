@@ -6,5 +6,7 @@ export const reformatText = (text: string) => {
 
   if (text.includes("&'s")) newText = newText.replace(/&'s/g, "'s");
 
+  if (text.includes("&amp;")) newText = newText.replace(/&amp;/g, "&");
+
   return newText;
 };
