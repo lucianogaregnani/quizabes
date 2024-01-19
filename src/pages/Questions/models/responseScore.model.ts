@@ -2,11 +2,11 @@ export const responseScore = {
     easy: {
         boolean: {
             correct: 5,
-            incorrect: -10 
+            incorrect: -7 
         },
         multiple: {
             correct: 10,
-            incorrect: -20 
+            incorrect: -15 
         }
     },
     medium: {
